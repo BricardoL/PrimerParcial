@@ -76,7 +76,10 @@ p{
     color: #D7DEE6;
 
 }
-
+/* Primer cambio: "Color modificado a 'contacto'"*/
+#menu li:last-child a{
+    color: red;
+}
 /* Social links*/
 .social-links{
     list-style: none;
@@ -84,14 +87,28 @@ p{
     margin-top: 3em;
     display: flex;
     flex-direction: row;
-    justify-content: center
+    justify-content: center;
+    align-content: flex-start;
 
+}
+/*Separar iconos*/
+.social-links li{ 
+    padding: 0em 1em;
+}
+.big-hero a.hide-mobile.show-desktop i{
+    height: 100px;
+
+}
+/*Cambiando color y tamaño al icono de la flecha*/
+.hide-mobile.show-desktop i{
+    font-size: 3em;
+    color: #0AC693
 }
 
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
-    font-size: 2.5em;
+    font-size: 10.5em; /*Aumentado tamaño de iconos*/
 }
 
 
