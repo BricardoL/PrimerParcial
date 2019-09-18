@@ -181,22 +181,43 @@ p{
     font-size: 1.125em;
     margin: 2em;
 }
-/*Aplicando flex a seccion about*/
+/*Aplicando grid a seccion about*/
 .about .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 620px;
+    align-content: stretch
 }
+/*Posicion de objetos en el grid*/
+.about .container .bio-info{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.about .container .contact{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.about .container h2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
 .about .container div{
     min-height: 300px;
-    max-width: 350px;
-    margin: 2rem auto;
+    max-width: auto;
+    margin: 0px 80px 0px 70px;
     list-style: none;
     overflow: hidden;
     padding-bottom: 2em;
 }
-/*Faltan cambios en esta parte*/
+
 
 .bio-info img{
    width: 200px;
@@ -219,12 +240,9 @@ p{
 
 .contact * + * {
     margin-top: 1.5em;
+    margin-bottom: 0.7em /*Aplicado margen inferior para mejor visibilidad*/
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
 
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
@@ -251,6 +269,7 @@ p{
     font-weight: 400;
     color: white;
     font-size: 1rem;
+    width: 200px /*Modificado ancho del boton 'contactar'*/
 }
 
 .black-decoration{
@@ -334,9 +353,8 @@ footer .social-links {
         display: flex;
         margin-top: 1em;
     }
-
-
-
+ 
+    
     /*TODO: FALTA CSS */
 } 
 
@@ -355,5 +373,18 @@ footer .social-links {
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
+    }
+}
+/*Creando estilo para moviles, flex en la seccion 'about'*/
+@media only screen and (max-width: 920px) {
+    .about .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center
+    }
+    /*Modificando ancho del boton 'contactar' para pantallas pequenias*/
+    .contact-form input[type=submit] {
+        width: 100%
     }
 }
