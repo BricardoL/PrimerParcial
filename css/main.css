@@ -42,6 +42,13 @@ p{
     height: 100px;
     margin: 0.8em;
 }
+/*Margen al icono naldana moviles*/
+.header:first-child{
+    margin-left:2.2em;
+}
+.header nav a{
+    margin-right: 1em;
+}
 
 .options {
     color: inherit;
@@ -92,7 +99,8 @@ p{
 
 }
 /*Separar iconos*/
-.social-links li{ 
+.big-hero .social-links li{ 
+    margin-top: -6.5em; /*Iconos de social links arriba en header*/
     padding: 0em 1em;
 }
 .big-hero a.hide-mobile.show-desktop i{
@@ -101,6 +109,7 @@ p{
 }
 /*Cambiando color y tamaño al icono de la flecha*/
 .hide-mobile.show-desktop i{
+    margin: -0.2em 0em 0.8em; /*Icono de flecha hacia arriba*/
     font-size: 3em;
     color: #0AC693
 }
@@ -179,7 +188,7 @@ p{
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
-    margin: 2em;
+    margin: 1em 2em 3em 2em;
 }
 /*Trasladado, esta parte de la seccion about es para moviles*/
 .about .container{
@@ -192,7 +201,7 @@ p{
 .about .container div{
     min-height: 300px;
     max-width: auto;
-    margin: 0px 40px 0px 40px;
+    margin: -35px 40px 50px 40px;
     list-style: none;
     overflow: hidden;
     padding-bottom: em;
@@ -231,6 +240,10 @@ p{
     font-size: 1em;
     width: 100%;
 }
+/*Negrita en labels de la clase contact form*/
+.contact-form label{
+    font-weight: bold
+}
 
 /* Decorando placeholder */
 
@@ -262,8 +275,9 @@ footer{
 }
 
 
-footer .social-links {
-    margin: 0;
+footer .social-links li{
+    margin: -5em 0em -2.3em; /*Iconos de social links arriba en footer*/
+    padding: 0em 1em;
 }
 
 .menu {
@@ -352,6 +366,14 @@ footer .social-links {
 *, ::before, ::after {
     font-size: calc(0.5em + 1.2vh); /*Aumentar tamano cuando se incrementa el pixelaje*/
 }
+/*Margen a naldana pantallas grandes*/
+.header:first-child{
+    margin-left: 5em;
+}
+/*Margen a nav para pantalla grande*/
+.header:last-child{
+    margin-right: 3em
+}
 .about .container{
     display: grid;
     align-content: center;
@@ -378,6 +400,10 @@ footer .social-links {
     grid-row-start: 1;
     grid-row-end: 2;
 }
+.about .container div{
+    margin: 0px 40px -10px 40px;
+    padding-bottom: 1em
+}
 
 /*Boton de contactar para pantallas grandes*/
 .contact-form input[type=submit] {
@@ -393,7 +419,7 @@ footer .social-links {
 
 @media only screen and (min-width: 1440px) {
     *, ::before, ::after {
-        font-size: calc(0.5em + 1.4vh); /*Aumentar tamano cuando se incrementa el pixelaje*/
+        font-size: calc(0.5em + 1.3vh); /*Aumentar tamano cuando se incrementa el pixelaje*/
     }
    /*Aplicado margen lateral para pantalla mas grande*/
     .about{
