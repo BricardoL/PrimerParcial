@@ -100,7 +100,8 @@ p{
 }
 /*Separar iconos*/
 .big-hero .social-links li{ 
-    margin-top: -6.5em; /*Iconos de social links arriba en header*/
+    margin-top: -6.5em; 
+    margin-bottom: 2em;/*Iconos de social links arriba en header*/
     padding: 0em 1em;
 }
 .big-hero a.hide-mobile.show-desktop i{
@@ -209,7 +210,7 @@ p{
 
 
 .bio-info img{
-   width: 200px;
+   width: 120px;
 }
 
 .bio-info p{
@@ -311,7 +312,7 @@ footer .social-links li{
 @media only screen and (min-width: 768px) {
   
     *, ::before, ::after {
-        font-size: calc(0.5em + 1.1vh); /*Aumentar tamano cuando se incrementa el pixelaje*/
+        font-size: calc(0.5em + 1vh); /*Aumentar tamano cuando se incrementa el pixelaje*/
     }
     .post ul {
         list-style: none;
@@ -413,8 +414,33 @@ footer .social-links li{
 .about{
     margin: 0px 20px
 }
+/*Ajustando  tamano para visibilidad de section*/
+.post ul li article{
+    height: 414px;
+    width: 329px
+
+}
+.bio-info img{
+    width: 200px; /*Agrandando imagen para orderadores*/
+ }
+ .post ul li article {
+    height: 400px;
+    width: 280px;
 
 
+}
+.green-area{
+    width: 100%
+}
+.post ul{
+    display: flex;
+    justify-content: center;
+    margin: 0px 10px
+}
+.post ul li {
+    margin: 10px;
+    flex: 1 0 300px;
+}
 }
 
 @media only screen and (min-width: 1440px) {
@@ -431,6 +457,20 @@ footer .social-links li{
     .about .container .contact{
         margin-left: 70px
     }
+    .contact-form{
+        font-size: 0.6em /*Tamano de fuente adaptada*/
+    }
+    /*Ajustando  tamano para visibilidad de section*/
+    .post ul li article{
+        height: 424px;
+        width: 350px
+
+    }
+    .post ul li {
+        min-height: 300px;
+        max-width: 350px;
+        margin: 2rem auto;
+    }
     /*TODO: FALTA CSS */
   
-}
+} /*No ha sido modificado para pantallas de 4k, width='2500px'*/
